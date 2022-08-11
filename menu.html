@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="/coding/js/randomrgba.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $("#html").load("/coding/html/workshop.html");
+        $("#css").load("/coding/css/workshop.html");
+        $("#text").load("/coding/workshop/text.html");
+        $("#href").load("/coding/workshop/href.html");
+        $("#divspan").load("/coding/workshop/divspan.html");
+        $("#embedding").load("/coding/workshop/embedding.html");
+
+        $("#online").load("/coding/workshop/online.html");
+
+        $("#php").load("/coding/php/workshop.html");
+        $("#pehu").load("/coding/workshop/pehu.html");
+
+        $("#membersonly").load("/coding/workshop/webtemplate.html");
+        $("#ccs").load("/coding/workshop/ccs.html");
+    })
+    $(function(){
+      jQuery('body').css({'background':getRumRgba()});
+      jQuery('.library li').css({'color':getRumRgba()});
+      jQuery('.ramdombg').css({'background':getRumRgba()});
+    });
+    </script>
+    <title>Workshop | How to Coding</title>
+    <style type="text/css">
+    @font-face {
+      font-family: "NewYork";
+      src: url("/coding/fontbook/NewYork.otf");
+    }
+    .NewYork {font-family:"NewYork";}
+
+      .library b,
+      .library i,
+      .library h1 {
+        font-family: "NewYork";
+      }
+      .library h1 {
+        font-size:200%;
+        font-weight: 500;
+      }
+      .library p {
+        background: #000;
+        color: #fff;
+        font-size: 90%;
+        border-radius: 0.25rem;
+        padding: 0.5rem; margin: 0;
+      }
+      .library a {
+        text-align: center;
+      }
+      .library p a {
+        border:0.125rem solid;
+      }
+      .library b,
+      .library i,
+      .library h1 {
+        text-shadow:0 0 0.1rem #fff;
+      }
+      .library u {
+        font-family:;
+      }
+
+      .infomation b,
+      .infomation h1 {
+        filter: invert(100%);
+      }
+      .library i {
+        filter: invert(50%);
+      }
+
+      .library li {
+        font-size:1rem;
+        padding: 2.5vh 1rem;
+        font-family: monospace;
+        filter: invert(100%);
+      }
+      .library hr {
+        border:none;
+        clear:both;
+        padding:1rem 0 0.25rem;
+        border-bottom:0.15rem dotted;
+        filter: invert(0%);
+      }
+      .library br {
+        clear:both;
+      }
+
+      .library::-webkit-scrollbar,
+      .library li::-webkit-scrollbar{
+        width: 0.25rem;
+        height: 2.5vh;
+      }
+      .library::-webkit-scrollbar-track,
+      .library li::-webkit-scrollbar-track{
+        border: none;
+      }
+      .library::-webkit-scrollbar-thumb,
+      .library li::-webkit-scrollbar-thumb{
+        border: none;
+        background: #fff;
+      }
+
+    </style>
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/coding/js/mousedragscrollable/scrollable.css" />
+    <link rel="stylesheet" href="/coding/fontbook/css/fontmotion.css"/>
+    <!-- Import the webpage's javascript file -->
+    <script src="/coding/js/mousedragscrollable/scrollable.js"></script>
+  </head>
+<body>
+<ul class="mousedragscrollable library">
+<li class="infomation">
+<b class="left NewYork">How to Coding</b>
+<b class="right NewYork">Basic</b>
+<br/>
+<h1 class="fontmotion">ウェブサイトを作ろう</h1>
+<p class="left">HTMLとCSSの基本／代表的なHTML要素とCSSプロパティを学ぶワークショップ</p>
+<hr/>
+<br/>
+<b class="left NewYork">Basic</b>
+<b class="right NewYork">Step 1</b>
+<div id="html"></div>
+<hr/>
+<br/>
+<b class="left NewYork">Basic</b>
+<b class="right NewYork">Step 2</b>
+<div id="css"></div>
+<hr/>
+<br/>
+<b class="left NewYork">Basic</b>
+<b class="right NewYork">Step 3</b>
+<div id="text"></div>
+<hr/>
+<br/>
+<b class="left NewYork">Basic</b>
+<b class="right NewYork">Step 4</b>
+<div id="href"></div>
+<hr/>
+<br/>
+<b class="left NewYork">Basic</b>
+<b class="right NewYork">Step 5</b>
+<div id="divspan"></div>
+<hr/>
+<br/>
+<b class="left NewYork">Basic</b>
+<b class="right NewYork">Step 6</b>
+<div id="embedding"></div>
+<br/>
+</li>
+<li id="online" class="ramdombg"></li>
+<li class="infomation">
+<b class="left NewYork">How to Coding</b>
+<b class="right NewYork">Members Only</b>
+<div id="php"></div>
+<hr/>
+<br/>
+<div id="pehu"></div>
+</li>
+<li id="membersonly" class="ramdombg"></li>
+<li id="ccs" class="ramdombg"></li>
+</ul>
+</body>
+
+<script>$(".mousedragscrollable").mousedragscrollable();</script>
+
+</html>
