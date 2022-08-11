@@ -45,8 +45,8 @@ if( !empty($_POST['btn_confirm']) ) {
 	$auto_reply_text .= "あなたの名前\n" . $_POST['name'] . "\n\n";
 	$auto_reply_text .= "ワークショップを希望する日時\n" . $_POST['date'] .  " ";
 	$auto_reply_text .= " ". $_POST['time'] . "\n\n\n";
-	$auto_reply_text .= "希望するワークショップ\n\nHTMLの基本" . nl2br($_POST['html']) . "\n\n";
-	$auto_reply_text .= "CSSの基本" . nl2br($_POST['css']) . "\n\n";
+	$auto_reply_text .= "希望するワークショップ\n\nHTMLの基本 : " . nl2br($_POST['html']) . "\n\n";
+	$auto_reply_text .= "CSSの基本 : " . nl2br($_POST['css']) . "\n\n";
 	$auto_reply_text .= "備考\n" . nl2br($_POST['contact']) . "\n\n\n";
 	$auto_reply_text .= "Posted on " . date("m-d-Y H:i") . "\n";
 	$auto_reply_text .= "creative-community.space/coding/";
