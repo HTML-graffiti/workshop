@@ -199,8 +199,8 @@ a:hover {
 </h2>
 </div>
 <div id="comment">
-<p>HTMLの基本 <?php echo nl2br($_POST['hmtl']); ?></p>
-<p>CSSの基本 <?php echo nl2br($_POST['css']); ?></p>
+<p>HTMLの基本 <?php echo ($_POST['html']); ?></p>
+<p>CSSの基本 <?php echo ($_POST['css']); ?></p>
 <p><?php echo nl2br($_POST['contact']); ?></p>
 </div>
 
