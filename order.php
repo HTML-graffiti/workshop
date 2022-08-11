@@ -246,14 +246,15 @@ a:hover {
 <input id="time" type="text" name="time" placeholder="ワークショップ希望開始時間" value="<?php if( !empty($_POST['time']) ){ echo $_POST['time']; } ?>" required>
 </hr>
 <p><br/><u>希望するワークショップ</u></p>
+HTMLの基本（所要時間：約1時間）<br/>
 <select name="html">
-HTMLの基本（所要時間：約1時間）
 <option value="無回答">- 選択する -</option>
 <option value="希望する">希望する</option>
 <option value="希望しない">希望しない</option>
 </select>
+
+CSSの基本（所要時間：約1時間）<br/>
 <select name="css">
-CSSの基本（所要時間：約1時間）
 <option value="無回答">- 選択する -</option>
 <option value="希望する">希望する</option>
 <option value="希望しない">希望しない</option>
