@@ -49,7 +49,7 @@ if( !empty($_POST['btn_confirm']) ) {
 	$auto_reply_text .= "CSSの基本" . nl2br($_POST['css']) . "\n\n";
 	$auto_reply_text .= "備考\n" . nl2br($_POST['contact']) . "\n\n\n";
 	$auto_reply_text .= "Posted on " . date("m-d-Y H:i") . "\n";
-	$auto_reply_text .= "creative-community.space/org/";
+	$auto_reply_text .= "creative-community.space/coding/";
 
 	// メール送信
 	mb_send_mail( $_POST['email'], $auto_reply_subject, $auto_reply_text, $header);
@@ -67,7 +67,7 @@ if( !empty($_POST['btn_confirm']) ) {
 	$admin_reply_text .= "CSSの基本" . nl2br($_POST['css']) . "\n\n";
 	$admin_reply_text .= " " . nl2br($_POST['contact']) . "\n\n\n";
 	$admin_reply_text .= "Posted on " . date("m-d-Y H:i") . "\n";
-	$admin_reply_text .= "creative-community.space/org/";
+	$admin_reply_text .= "creative-community.space/coding/";
 
 	// 運営側へメール送信
 	mb_send_mail( 'pehu@creative-community.space', $admin_reply_subject, $admin_reply_text, $header);
