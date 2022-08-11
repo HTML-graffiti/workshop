@@ -247,12 +247,14 @@ a:hover {
 </hr>
 <p><br/><u>希望するワークショップ</u></p>
 <select name="html">
-<option value="">HTMLの基本（所要時間：約1時間）</option>
+HTMLの基本（所要時間：約1時間）
+<option value="無回答">- 選択する -</option>
 <option value="希望する">希望する</option>
 <option value="希望しない">希望しない</option>
 </select>
 <select name="css">
-<option value="">CSSの基本（所要時間：約1時間）</option>
+CSSの基本（所要時間：約1時間）
+<option value="無回答">- 選択する -</option>
 <option value="希望する">希望する</option>
 <option value="希望しない">希望しない</option>
 </select>
