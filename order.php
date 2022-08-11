@@ -45,7 +45,8 @@ if( !empty($_POST['btn_confirm']) ) {
 	$auto_reply_text .= "あなたの名前\n" . $_POST['name'] . "\n\n";
 	$auto_reply_text .= "ワークショップを希望する日時\n" . $_POST['date'] .  " ";
 	$auto_reply_text .= " ". $_POST['time'] . "\n\n\n";
-	$auto_reply_text .= "希望するワークショップ\n" . nl2br($_POST['checkbox']) . "\n\n";
+	$auto_reply_text .= "希望するワークショップ\n\nHTMLの基本" . nl2br($_POST['html']) . "\n\n";
+	$auto_reply_text .= "CSSの基本" . nl2br($_POST['css']) . "\n\n";
 	$auto_reply_text .= "備考\n" . nl2br($_POST['contact']) . "\n\n\n";
 	$auto_reply_text .= "Posted on " . date("m-d-Y H:i") . "\n";
 	$auto_reply_text .= "creative-community.space/org/";
@@ -62,7 +63,8 @@ if( !empty($_POST['btn_confirm']) ) {
 	$admin_reply_text .= "メールアドレス\n" . $_POST['email'] . "\n\n";
 	$admin_reply_text .= "ワークショップを希望する日時\n" . $_POST['date'] .  " ";
 	$admin_reply_text .= " ". $_POST['time'] . "\n\n\n";
-	$admin_reply_text .= "" . nl2br($_POST['checkbox']) . "\n\n";
+	$admin_reply_text .= "HTMLの基本" . nl2br($_POST['html']) . "\n";
+	$admin_reply_text .= "CSSの基本" . nl2br($_POST['css']) . "\n\n";
 	$admin_reply_text .= " " . nl2br($_POST['contact']) . "\n\n\n";
 	$admin_reply_text .= "Posted on " . date("m-d-Y H:i") . "\n";
 	$admin_reply_text .= "creative-community.space/org/";
@@ -197,7 +199,8 @@ a:hover {
 </h2>
 </div>
 <div id="comment">
-<p><?php echo nl2br($_POST['checkbox']); ?></p>
+<p>HTMLの基本 <?php echo nl2br($_POST['hmtl']); ?></p>
+<p>CSSの基本 <?php echo nl2br($_POST['css']); ?></p>
 <p><?php echo nl2br($_POST['contact']); ?></p>
 </div>
 
@@ -210,7 +213,8 @@ a:hover {
 <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
 <input type="hidden" name="date" value="<?php echo $_POST['date']; ?>">
 <input type="hidden" name="time" value="<?php echo $_POST['time']; ?>">
-<input type="hidden" name="checkbox" value="<?php echo $_POST['checkbox']; ?>">
+<input type="hidden" name="html" value="<?php echo $_POST['html']; ?>">
+<input type="hidden" name="css" value="<?php echo $_POST['css']; ?>">
 <input type="hidden" name="contact" value="<?php echo $_POST['contact']; ?>">
 </div>
 </form>
@@ -241,11 +245,17 @@ a:hover {
 <input type="date" name="date" value="<?php if( !empty($_POST['date']) ){ echo $_POST['date']; } ?>" required><br/>
 <input id="time" type="text" name="time" placeholder="ワークショップ希望開始時間" value="<?php if( !empty($_POST['time']) ){ echo $_POST['time']; } ?>" required>
 </hr>
-<p><br/><u>希望するワークショップ</u> </p>
-<p class="radio">（複数選択可）
-<input type="checkbox" name="checkbox" value="HTMLの基本" required>HTMLの基本
-<input type="checkbox" name="checkbox" value="CSSの基本" required>CSSの基本
-</p>
+<p><br/><u>希望するワークショップ</u></p>
+<select name="html">
+<option value="">HTMLの基本（所要時間：約1時間）</option>
+<option value="希望する">希望する</option>
+<option value="希望しない">希望しない</option>
+</select>
+<select name="css">
+<option value="">CSSの基本（所要時間：約1時間）</option>
+<option value="希望する">希望する</option>
+<option value="希望しない">希望しない</option>
+</select>
 <textarea name="contact" placeholder="備考" required><?php if( !empty($_POST['contact']) ){ echo $_POST['contact']; } ?></textarea>
 <p><input type="submit" name="btn_confirm" value="確認する"></p>
 </form>
