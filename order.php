@@ -176,7 +176,7 @@ a:hover {
 <div id="contents">
 <div id="main">
 <p>How to Coding</p>
-<h1>HTML graffiti</h1>
+<h1>HTML graffiti Online Workshop</h1>
 </div>
 </div>
 <div id="form">
